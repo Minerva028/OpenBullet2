@@ -63,7 +63,7 @@ namespace Updater
             else
             {
                 Console.WriteLine("Already up to date!");
-                Console.ReadKey();
+                // Console.ReadKey();
                 Environment.Exit(0);
             }
 
@@ -146,16 +146,16 @@ namespace Updater
             }
 
             Console.WriteLine("The update was completed successfully. You may now restart your OpenBullet 2 instance!");
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            // Console.WriteLine("Press any key to exit...");
+            // Console.ReadKey();
             Environment.Exit(0);
         }
 
         private static void ExitWithError(Exception ex)
         {
             Console.WriteLine($"Failed! {ex.Message}");
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            // Console.WriteLine("Press any key to exit...");
+            // Console.ReadKey();
             Environment.Exit(1);
         }
 
