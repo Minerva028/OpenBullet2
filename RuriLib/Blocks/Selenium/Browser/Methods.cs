@@ -43,6 +43,13 @@ namespace RuriLib.Blocks.Selenium.Browser
                     chromeservice.HideCommandPromptWindow = true;
                     chromeservice.EnableVerboseLogging = false;
                     chromeop.AddArgument("--log-level=3");
+                    chromeop.AddArgument("--disable-blink-features=AutomationControlled");
+                    chromeop.AddArgument("--disable-popup-blocking");
+                    chromeop.AddArgument("--disable-blink-features");
+                    chromeop.AddArgument("disable-infobars");
+                    chromeop.AddExcludedArgument("enable-automation");
+                    chromeop.AddAdditionalChromeOption("useAutomationExtension", false);
+
                     chromeop.BinaryLocation = provider.ChromeBinaryLocation;
 
                     if (Utils.IsDocker())
