@@ -46,7 +46,7 @@ namespace RuriLib.Blocks.Selenium.Browser
                     chromeop.AddArgument("--disable-blink-features=AutomationControlled");
                     chromeop.AddArgument("--disable-popup-blocking");
                     chromeop.AddArgument("--disable-blink-features");
-                    chromeop.AddArgument("disable-infobars");
+                    chromeop.AddArgument("--disable-infobars");
                     chromeop.AddExcludedArgument("enable-automation");
                     chromeop.AddAdditionalChromeOption("useAutomationExtension", false);
 
@@ -71,6 +71,12 @@ namespace RuriLib.Blocks.Selenium.Browser
                     if (data.ConfigSettings.BrowserSettings.DismissDialogs)
                     {
                         chromeop.AddArgument("--disable-notifications");
+                        // chromeop.AddArgument("--disable-blink-features=AutomationControlled");
+                        // chromeop.AddArgument("--disable-popup-blocking");
+                        // chromeop.AddArgument("--disable-blink-features");
+                        // chromeop.AddArgument("--disable-infobars");
+                        // chromeop.AddExcludedArgument("enable-automation");
+                        // chromeop.AddAdditionalChromeOption("useAutomationExtension", false);
                     }
 
                     args = data.ConfigSettings.BrowserSettings.CommandLineArgs;
